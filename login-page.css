@@ -1,3 +1,4 @@
+/* In general, I follow the guide line from Figma for size, gap, etc. */
 /* import font */
 
 @font-face {
@@ -67,7 +68,7 @@ body {
     z-index: -2;
 }
 
-/* White rectangle in the middle of the screen */
+/* -------------------------------------------------------------- */
 
 #main-holder {
     height: 100%;
@@ -78,6 +79,12 @@ body {
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
+}
+
+#group-img {
+    padding-bottom: 71.15px;
+    width: 119.39px;
+    height: 97.85px;
 }
 
 /* -------------------------------------------------------------- */
@@ -145,15 +152,15 @@ input {
     padding-right: 0px;
 }
 
+/* set icon as background not to be bothered by text */
+
 #username-field {
     background: url(assets/user.png) no-repeat 12px;
-    padding-left: 51px;
     margin-bottom: 20px;
 }
 
 #password-field {
     background: url(assets/lock.png) no-repeat 12px;
-    padding-left: 51px;
 }
 
 /* Style the login button */
@@ -184,7 +191,6 @@ p {
     width: 300px;
     display: flex;
     justify-content: flex-end;
-    font-family: Montserrat;
     font-size: 16px;
     font-weight: 500;
     line-height: 19.5px;

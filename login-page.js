@@ -23,17 +23,16 @@ loginButton.addEventListener("click", (e) => {
     const username = loginForm.username.value;
     const password = loginForm.password.value;
 
-    if (regex.test(password)) {        
-        if (username === correctUser && password === correctPwd) {
-            // If the credentials are valid, show an alert box and reload the page
-            window.location.href = "login-success.html";
-        } else {
-            // Otherwise, make the login error message show (change its oppacity)
-            var options = 'top=0, left=0, width=500, height=600, status=no, menubar=no, toolbar=no, resizable=no';
-            window.open("login-fail.html", "Failure Pop up", options);
-        }
+    if (username === correctUser && password === correctPwd) {
+        // If the credentials are valid, move to the login blank
+        window.location.href = "login-success.html";
     } else {
-        errorMessage.style.opacity = 1;
-        errorMessage.style.cursor = 'text';
+        // If the password is a wrong combination, show the error message
+        if (!regex.test(password)) {
+            errorMessage.style.opacity = 1;
+            errorMessage.style.cursor = 'text';
+        }
+        // show the pop up window with this message for the invalid password
+        window.alert("the provided password is wrong");
     }
 })
