@@ -97,7 +97,8 @@ body {
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    font-size: 12px;
+    font-size: 13px;
+    font-weight: 500;
     align-items: center;
     color: red;
     opacity: 0;

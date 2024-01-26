@@ -31,6 +31,9 @@ loginButton.addEventListener("click", (e) => {
         if (!regex.test(password)) {
             errorMessage.style.opacity = 1;
             errorMessage.style.cursor = 'text';
+        } else {
+            errorMessage.style.opacity = 0;
+            errorMessage.style.cursor = 'default';
         }
         // show the pop up window with this message for the invalid password
         window.alert("the provided password is wrong");
