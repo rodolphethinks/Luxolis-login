@@ -10,19 +10,28 @@
 </head>
 
 <body>
-  <main id="main-holder">
-    <h1 id="login-header">Login</h1>
-    
-    <div id="login-error-msg-holder">
-      <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
+  <div id="background" style="position:absolute; width: 100%; z-index:-1">
+    <img src="assets/Vector.png" style="float:right" />
+    <div id="circle1"
+      style="width:219px; height:219px; border-radius: 0 219px 0 0; background-color: #274FC7; float: left; bottom:0; position: absolute;">
     </div>
-    
+    <div id="circle2"
+      style="width:286px; height:286px; border-radius: 0 286px 0 0; background-color: #244BC5; float: left; bottom:0; position: absolute;z-index: -1;">
+    </div>
+    <div id="circle3"
+      style="width:362px; height:362px; border-radius: 0 362px 0 0; background-color: #274FC7; float: left; bottom:0; position: absolute; z-index: -2;">
+    </div>
+  </div>
+  <main id="main-holder">
+    <img src="assets/Group.png" style="padding-bottom: 71.15px; width: 119.39px; height: 97.85px;" />
     <form id="login-form">
-      <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
-      <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
-      <input type="submit" value="Login" id="login-form-submit">
+      <input type="text" name="username" id="username-field" class="login-form-field" placeholder="USERNAME">
+      <input type="password" name="password" id="password-field" class="login-form-field" placeholder="PASSWORD">
+      <input type="submit" value="LOGIN" id="login-form-submit">
     </form>
-  
+    <div id="find-password">
+      <p>Forgot password?</p>
+    </div>
   </main>
 </body>
 
