@@ -4,9 +4,13 @@
     src: url(assets/Montserrat-VariableFont_wght.ttf);
 }
 
+html {
+    height: 100%;
+}
+
 body {
-    height: 720px;
-    width: 1280px;
+    height: 100%;
+    width: 100%;
     font-family: Montserrat;
     background-color: #2148C0;
     margin: 0px;
