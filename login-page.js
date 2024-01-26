@@ -9,10 +9,11 @@
 
 const loginForm = document.getElementById("login-form");
 const loginButton = document.getElementById("login-form-submit");
-const loginErrorMsg = document.getElementById("login-error-msg");
+const errorMessage = document.getElementById("error-message");
 
 const correctUser = "test@luxpmsoft.com";
 const correctPwd = "test1234!";
+const regex = /^[a-zA-Z0-9!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]+$/;
 
 // When the login button is clicked, the following code is executed
 loginButton.addEventListener("click", (e) => {
@@ -22,11 +23,17 @@ loginButton.addEventListener("click", (e) => {
     const username = loginForm.username.value;
     const password = loginForm.password.value;
 
-    if (username === correctUser && password === correctPwd) {
-        // If the credentials are valid, show an alert box and reload the page
-        window.location.href = "login-success.html";
+    if (regex.test(password)) {        
+        if (username === correctUser && password === correctPwd) {
+            // If the credentials are valid, show an alert box and reload the page
+            window.location.href = "login-success.html";
+        } else {
+            // Otherwise, make the login error message show (change its oppacity)
+            var options = 'top=0, left=0, width=500, height=600, status=no, menubar=no, toolbar=no, resizable=no';
+            window.open("login-fail.html", "Failure Pop up", options);
+        }
     } else {
-        // Otherwise, make the login error message show (change its oppacity)
-        loginErrorMsg.style.opacity = 1;
+        errorMessage.style.opacity = 1;
+        errorMessage.style.cursor = 'text';
     }
 })

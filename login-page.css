@@ -1,12 +1,17 @@
-/* Make the page use the entire screen */
+/* import font */
+
 @font-face {
     font-family: Montserrat;
     src: url(assets/Montserrat-VariableFont_wght.ttf);
 }
 
+/* Make the page use the entire screen */
+
 html {
     height: 100%;
 }
+
+/* Style body */
 
 body {
     height: 100%;
@@ -14,6 +19,52 @@ body {
     font-family: Montserrat;
     background-color: #2148C0;
     margin: 0px;
+}
+
+/* background style */
+#background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#background img {
+    float: right;
+    width: 67.5%;
+    height: 100%;
+}
+
+#circle1 {
+    width: 219px;
+    height: 219px;
+    border-radius: 0 219px 0 0;
+    background-color: #274FC7;
+    float: left;
+    bottom: 0;
+    position: absolute;
+}
+
+#circle2 {
+    width: 286px;
+    height: 286px;
+    border-radius: 0 286px 0 0;
+    background-color: #244BC5;
+    float: left;
+    bottom: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+#circle3 {
+    width: 362px;
+    height: 362px;
+    border-radius: 0 362px 0 0;
+    background-color: #274FC7;
+    float: left;
+    bottom: 0;
+    position: absolute;
+    z-index: -2;
 }
 
 /* White rectangle in the middle of the screen */
@@ -34,21 +85,16 @@ body {
 /* Error message. By default it's transparent, but the opacity is controlled
   by JavaScript */
 
-#login-error-msg {
-    width: 23%;
-    text-align: center;
-    margin: 0;
-    padding: 5px;
+#error-message {
+    height: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
     font-size: 12px;
-    font-weight: bold;
-    color: #8a0000;
-    border: 1px solid #8a0000;
-    background-color: #e58f8f;
+    align-items: center;
+    color: red;
     opacity: 0;
-}
-
-#error-msg-second-line {
-    display: block;
+    cursor: default;
 }
 
 /* -------------------------------------------------------------- */
@@ -61,18 +107,16 @@ input {
     color: #FFF;
 }
 
-/* Adjust the positioning of the login form inside the last row of the
-  main grid */
+/* Adjust the positioning of the login form */
 
 #login-form {
     align-self: flex-start;
     display: grid;
     justify-items: center;
     align-items: center;
-    gap: 20px;
 }
 
-/* Style the login form fields' placeholders */
+/* Style the login form fields' placeholders in different browsers*/
 
 .login-form-field::placeholder {
     color: #FFF;
@@ -104,6 +148,7 @@ input {
 #username-field {
     background: url(assets/user.png) no-repeat 12px;
     padding-left: 51px;
+    margin-bottom: 20px;
 }
 
 #password-field {
@@ -129,6 +174,8 @@ input {
     margin-top: 23px;
 }
 
+/* Style the Forgot password message */
+
 p {
     margin: 0;
 }
@@ -144,4 +191,5 @@ p {
     text-align: center;
     color: #FFF;
     padding-top: 11px;
+    cursor: pointer;
 }
