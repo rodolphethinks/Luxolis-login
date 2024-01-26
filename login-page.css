@@ -92,6 +92,7 @@ body {
 /* Error message. By default it's transparent, but the opacity is controlled
   by JavaScript */
 
+/* I tested with white-space as a counter example to special characters */
 #error-message {
     height: 20px;
     width: 100%;

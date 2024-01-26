@@ -28,6 +28,7 @@ loginButton.addEventListener("click", (e) => {
         window.location.href = "login-success.html";
     } else {
         // If the password is a wrong combination, show the error message
+        // I tested with white-space as a counter example to special characters
         if (!regex.test(password)) {
             errorMessage.style.opacity = 1;
             errorMessage.style.cursor = 'text';
